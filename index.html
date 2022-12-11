@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos List</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div id="parchment"></div>
+    <div id="container">
+      <header>
+        <h1>List</h1>
+        <form id="new-todo-form">
+          <input
+            type="text"
+            name="new-todo-input"
+            id="new-todo-input"
+            placeholder="Enter a new task"
+            class="text"
+          />
+          <input type="submit" id="new-todo-submit" value="New Task" />
+        </form>
+      </header>
+      <main>
+        <section class="todos-list">
+          <h2>Stuff To Do</h2>
+          <div id="todos-container" class="not-selectable"></div>
+        </section>
+      </main>
+    </div>
+    <i id="overflow-icon" class="fa-solid fa-angles-down"></i>
+    <svg style="display: none">
+      <filter id="wavy2">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.02"
+          numOctaves="5"
+          seed="1"
+        />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+      </filter>
+    </svg>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
